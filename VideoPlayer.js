@@ -19,6 +19,7 @@ import _ from 'lodash';
 export default class VideoPlayer extends Component {
 
     static defaultProps = {
+        shouldHideControls:             false,
         toggleResizeModeOnFullscreen:   true,
         playInBackground:               false,
         playWhenInactive:               false,
@@ -191,7 +192,7 @@ export default class VideoPlayer extends Component {
         state.loading = false;
         this.setState( state );
 
-        if ( state.showControls ) {
+        if ( state.showControls && props.shouldHideControls) {
             this.setControlTimeout();
         }
 
