@@ -1,4 +1,4 @@
-**This is a fork of https://github.com/react-native-community/react-native-video. That does not hide controls**
+**This is a fork of https://github.com/itsnubix/react-native-video-controls. That does not hide controls**
 
 **You should not use it**
 
