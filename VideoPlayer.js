@@ -192,7 +192,7 @@ export default class VideoPlayer extends Component {
         state.loading = false;
         this.setState( state );
 
-        if ( state.showControls && this.props.shouldHideControls) {
+        if ( state.showControls) {
             this.setControlTimeout();
         }
 
@@ -287,7 +287,7 @@ export default class VideoPlayer extends Component {
      */
     setControlTimeout() {
         this.player.controlTimeout = setTimeout( ()=> {
-            this._hideControls();
+            this.props.shouldHideControls && this._hideControls();
         }, this.player.controlTimeoutDelay );
     }
 
